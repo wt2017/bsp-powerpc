@@ -1,0 +1,4739 @@
+Document file - DO NOT EDIT
+
+<BEGIN> BSP_DIR
+$(TGT_DIR)/config/cds8548
+<END>
+
+<BEGIN> BUILD_RULE_linkSyms.o
+{linkSyms.o \
+	: \
+	$(PRJ_DIR)/linkSyms.c} \
+	{$(CC) \
+	$(OPTION_OBJECT_ONLY) \
+	$(CFLAGS) \
+	$(PROJECT_BSP_FLAGS_EXTRA) \
+	$(PRJ_DIR)/linkSyms.c \
+	-o \
+	$@}
+<END>
+
+<BEGIN> BUILD_RULE_prjConfig.o
+{prjConfig.o \
+	: \
+	$(PRJ_DIR)/prjConfig.c} \
+	{$(CC) \
+	$(OPTION_OBJECT_ONLY) \
+	$(CFLAGS) \
+	$(PROJECT_BSP_FLAGS_EXTRA) \
+	$(PRJ_DIR)/prjConfig.c \
+	-o \
+	$@}
+<END>
+
+<BEGIN> BUILD_RULE_romInit.o
+{romInit.o \
+	: \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/romInit.s \
+	} \
+	{$(CC) \
+	$(OPTION_OBJECT_ONLY) \
+	$(CFLAGS_AS) \
+	$(PROJECT_BSP_FLAGS_EXTRA) \
+	$(ROM_FLAGS_EXTRA) \
+	$< \
+	-o \
+	$@}
+<END>
+
+<BEGIN> BUILD_RULE_romStart.o
+{romStart.o \
+	: \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/romStart.c \
+	} \
+	{$(CC) \
+	$(OPTION_OBJECT_ONLY) \
+	$(CFLAGS) \
+	$(PROJECT_BSP_FLAGS_EXTRA) \
+	$(ROM_FLAGS_EXTRA) \
+	$< \
+	-o \
+	$@}
+<END>
+
+<BEGIN> BUILD_RULE_sysALib.o
+{sysALib.o \
+	: \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/sysALib.s} \
+	{$(AS) \
+	$(OPTION_OBJECT_ONLY) \
+	$(CFLAGS_AS) \
+	$(PROJECT_BSP_FLAGS_EXTRA) \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/sysALib.s \
+	-o \
+	$@}
+<END>
+
+<BEGIN> BUILD_RULE_sysLib.o
+{sysLib.o \
+	: \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/sysLib.c} \
+	{$(CC) \
+	$(OPTION_OBJECT_ONLY) \
+	$(CFLAGS) \
+	$(PROJECT_BSP_FLAGS_EXTRA) \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/sysLib.c \
+	-o \
+	$@}
+<END>
+
+<BEGIN> BUILD_SOURCE_ENABLE
+0
+<END>
+
+<BEGIN> BUILD__CURRENT
+default_romCompress
+<END>
+
+<BEGIN> BUILD__LIST
+default default_rom default_romCompress default_romResident
+<END>
+
+<BEGIN> BUILD_default_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_default_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_default_MACRO_BOOT_EXTRA
+
+<END>
+
+<BEGIN> BUILD_default_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_default_MACRO_CC_ARCH_SPEC
+-mcpu=8540 -mstrict-align -msoft-float -mabi=no-spe
+<END>
+
+<BEGIN> BUILD_default_MACRO_CFLAGS
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-fno-builtin \
+	-Wall \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DPRJ_BUILD \
+	-D_WRS_KERNEL \
+	-I \
+	$(PRJ_DIR) \
+	-I \
+	$(PRJ_DIR)/../cds8548 \
+	-I \
+	$(TGT_DIR)/h \
+	-I \
+	$(TGT_DIR)/config/comps/src \
+	-I \
+	$(TGT_DIR)/h/wrn/coreip \
+	-I \
+	$(TGT_DIR)/src/drv \
+	-I \
+	$(WIND_HOME)/components/windml-4.2/h \
+	-I \
+	$(WIND_HOME)/components/dcom-2.3/h \
+	-I \
+	$(WIND_HOME)/components/opc-3.1/h \
+	-I \
+	$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I \
+	$(WIND_HOME)/components/webservices-1.4/h \
+	-I \
+	$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I \
+	$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h
+<END>
+
+<BEGIN> BUILD_default_MACRO_CFLAGS_AS
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-fno-builtin \
+	-xassembler-with-cpp \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DPRJ_BUILD \
+	-D_WRS_KERNEL \
+	-I \
+	$(PRJ_DIR) \
+	-I \
+	$(PRJ_DIR)/../cds8548 \
+	-I \
+	$(TGT_DIR)/h \
+	-I \
+	$(TGT_DIR)/config/comps/src \
+	-I \
+	$(TGT_DIR)/h/wrn/coreip \
+	-I \
+	$(TGT_DIR)/src/drv \
+	-I \
+	$(WIND_HOME)/components/windml-4.2/h \
+	-I \
+	$(WIND_HOME)/components/dcom-2.3/h \
+	-I \
+	$(WIND_HOME)/components/opc-3.1/h \
+	-I \
+	$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I \
+	$(WIND_HOME)/components/webservices-1.4/h \
+	-I \
+	$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I \
+	$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h
+<END>
+
+<BEGIN> BUILD_default_MACRO_CFLAGS_AS_PROJECT
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h \
+	-I. \
+	-I$(TGT_DIR)/config/all \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/config \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/config/comps/src/dosfs2 \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-D_WRS_KERNEL \
+	-xassembler-with-cpp
+<END>
+
+<BEGIN> BUILD_default_MACRO_CFLAGS_PROJECT
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-Wall \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h \
+	-I. \
+	-I$(TGT_DIR)/config/all \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/config \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/config/comps/src/dosfs2 \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-D_WRS_KERNEL
+<END>
+
+<BEGIN> BUILD_default_MACRO_CPP
+ccppc -E -P
+<END>
+
+<BEGIN> BUILD_default_MACRO_EXTRA_MODULES
+$(SUB_TARGETS)
+<END>
+
+<BEGIN> BUILD_default_MACRO_HEX_FLAGS
+
+<END>
+
+<BEGIN> BUILD_default_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_default_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_default_MACRO_LD_LINK_PATH
+-L$(TGT_DIR)/lib/ppc/PPC85XX/gnu \
+	-L$(TGT_DIR)/lib/ppc/PPC85XX/common \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfgnu_ppc85XX \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfcommon_ppc85XX \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfgnu \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfcommon \
+	-L$(WS_ROOT_DIR)/obj/vxworks-6.3/krnl/lib/ppc/PPC32/gnu \
+	-L$(WS_ROOT_DIR)/obj/vxworks-6.3/krnl/lib/ppc/PPC32/common \
+	-L$(WIND_HOME)/components/obj/vxworks-6.3/krnl/lib/ppc/PPC32/gnu \
+	-L$(WIND_HOME)/components/obj/vxworks-6.3/krnl/lib/ppc/PPC32/common
+<END>
+
+<BEGIN> BUILD_default_MACRO_LD_PARTIAL
+ccppc -r -nostdlib -Wl,-X
+<END>
+
+<BEGIN> BUILD_default_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_default_MACRO_LIBS
+$(VX_OS_LIBS)
+<END>
+
+<BEGIN> BUILD_default_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_default_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_default_MACRO_OPTION_DEPEND
+-M -w
+<END>
+
+<BEGIN> BUILD_default_MACRO_OPTION_GENERATE_DEPENDENCY_FILE
+-MD
+<END>
+
+<BEGIN> BUILD_default_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_default_MACRO_OPTION_LANG_C
+-xc
+<END>
+
+<BEGIN> BUILD_default_MACRO_OPTION_UNDEFINE_MACRO
+-U
+<END>
+
+<BEGIN> BUILD_default_MACRO_RAM_HIGH_ADRS
+01000000 # RAM text/data address
+<END>
+
+<BEGIN> BUILD_default_MACRO_RAM_LOW_ADRS
+00100000 # RAM text/data address
+<END>
+
+<BEGIN> BUILD_default_MACRO_ROM_LINK_ADRS
+fff00000
+<END>
+
+<BEGIN> BUILD_default_MACRO_ROM_SIZE
+00100000 # number of bytes of ROM space
+<END>
+
+<BEGIN> BUILD_default_MACRO_ROM_TEXT_ADRS
+fff00100 # ROM entry address
+<END>
+
+<BEGIN> BUILD_default_MACRO_ROM_WARM_ADRS
+fff00108 # ROM warm entry address
+<END>
+
+<BEGIN> BUILD_default_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_default_MACRO_TOOL_FAMILY
+gnu
+<END>
+
+<BEGIN> BUILD_default_MACRO_USR_ENTRY
+usrInit
+<END>
+
+<BEGIN> BUILD_default_MACRO_VMA_START
+0x0
+<END>
+
+<BEGIN> BUILD_default_RO_DEPEND_PATH
+{$(TGT_DIR)/h/} \
+	{$(TGT_DIR)/src/} \
+	{$(TGT_DIR)/config/} \
+	{$(TGT_DIR)/h/wrn/coreip/}
+<END>
+
+<BEGIN> BUILD_default_TC
+::tc_PPC85XXgnu
+<END>
+
+<BEGIN> BUILD_default_romCompress_BUILDRULE
+vxWorks_romCompress
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_BOOT_EXTRA
+
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_CC_ARCH_SPEC
+-mcpu=8540 -mstrict-align -msoft-float -mabi=no-spe
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_CFLAGS
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-fno-builtin \
+	-Wall \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DPRJ_BUILD \
+	-D_WRS_KERNEL \
+	-DBIOS_APP \
+	-I \
+	$(PRJ_DIR) \
+	-I \
+	$(PRJ_DIR)/../../bsp_files/PPC8548 \
+	-I \
+	$(TGT_DIR)/h \
+	-I \
+	$(TGT_DIR)/config/comps/src \
+	-I \
+	$(TGT_DIR)/h/wrn/coreip \
+	-I \
+	$(TGT_DIR)/src/drv
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_CFLAGS_AS
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-fno-builtin \
+	-xassembler-with-cpp \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DPRJ_BUILD \
+	-D_WRS_KERNEL \
+	-I \
+	$(PRJ_DIR) \
+	-I \
+	$(PRJ_DIR)/../../bsp_files/PPC8548 \
+	-I \
+	$(TGT_DIR)/h \
+	-I \
+	$(TGT_DIR)/config/comps/src \
+	-I \
+	$(TGT_DIR)/h/wrn/coreip \
+	-I \
+	$(TGT_DIR)/src/drv
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_CFLAGS_AS_PROJECT
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h \
+	-I. \
+	-I$(TGT_DIR)/config/all \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/config \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/config/comps/src/dosfs2 \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-D_WRS_KERNEL \
+	-xassembler-with-cpp
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_CFLAGS_PROJECT
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-Wall \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h \
+	-I. \
+	-I$(TGT_DIR)/config/all \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/config \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/config/comps/src/dosfs2 \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-D_WRS_KERNEL
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_CPP
+ccppc -E -P
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_EXTRA_MODULES
+$(SUB_TARGETS) ../libtffs.a ../zlib_drv_vx63.o
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_HEX_FLAGS
+
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_LD_LINK_PATH
+-L$(TGT_DIR)/lib/ppc/PPC32/sfcommon_ppc85XX_e500v2 \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfgnu \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfcommon \
+	-L$(WS_ROOT_DIR)/obj/vxworks-6.3/krnl/lib/ppc/PPC32/gnu \
+	-L$(WS_ROOT_DIR)/obj/vxworks-6.3/krnl/lib/ppc/PPC32/common
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_LD_PARTIAL
+ccppc -r -nostdlib -Wl,-X
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_LIBS
+$(VX_OS_LIBS)
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_OPTION_DEPEND
+-M -w
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_OPTION_GENERATE_DEPENDENCY_FILE
+-MD
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_OPTION_LANG_C
+-xc
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_OPTION_UNDEFINE_MACRO
+-U
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_POST_HEX_BUILD_RULE
+
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_RAM_HIGH_ADRS
+04000000 # RAM text/data address
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_RAM_LOW_ADRS
+03e00000 # RAM text/data address
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_ROM_LINK_ADRS
+fff40000
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_ROM_SIZE
+000c0000 # number of bytes of ROM space
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_ROM_TEXT_ADRS
+fff40100 # ROM entry address
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_ROM_WARM_ADRS
+fff40108 # ROM warm entry address
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_TOOL_FAMILY
+gnu
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_USR_ENTRY
+usrInit
+<END>
+
+<BEGIN> BUILD_default_romCompress_MACRO_VMA_START
+0x0
+<END>
+
+<BEGIN> BUILD_default_romCompress_RO_DEPEND_PATH
+{$(TGT_DIR)/h/} \
+	{$(TGT_DIR)/src/} \
+	{$(TGT_DIR)/config/} \
+	{$(TGT_DIR)/h/wrn/coreip/}
+<END>
+
+<BEGIN> BUILD_default_romCompress_TC
+::tc_PPC85XXgnu
+<END>
+
+<BEGIN> BUILD_default_romResident_BUILDRULE
+vxWorks_romResident
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_BOOT_EXTRA
+
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_CC_ARCH_SPEC
+-mcpu=8540 -mstrict-align -msoft-float -mabi=no-spe
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_CFLAGS
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-Wall \
+	-I$(PRJ_DIR) \
+	-I$(PRJ_DIR)/../cds8548 \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DPRJ_BUILD \
+	-D_WRS_KERNEL \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_CFLAGS_AS
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-xassembler-with-cpp \
+	-I$(PRJ_DIR) \
+	-I$(PRJ_DIR)/../cds8548 \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DPRJ_BUILD \
+	-D_WRS_KERNEL \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_CFLAGS_AS_PROJECT
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h \
+	-I. \
+	-I$(TGT_DIR)/config/all \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/config \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/config/comps/src/dosfs2 \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-D_WRS_KERNEL \
+	-xassembler-with-cpp
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_CFLAGS_PROJECT
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-Wall \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h \
+	-I. \
+	-I$(TGT_DIR)/config/all \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/config \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/config/comps/src/dosfs2 \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-D_WRS_KERNEL
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_CPP
+ccppc -E -P
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_EXTRA_MODULES
+$(SUB_TARGETS)
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_HEX_FLAGS
+
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_LD_LINK_PATH
+-L$(TGT_DIR)/lib/ppc/PPC85XX/gnu \
+	-L$(TGT_DIR)/lib/ppc/PPC85XX/common \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfgnu_ppc85XX \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfcommon_ppc85XX \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfgnu \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfcommon \
+	-L$(WS_ROOT_DIR)/obj/vxworks-6.3/krnl/lib/ppc/PPC32/gnu \
+	-L$(WS_ROOT_DIR)/obj/vxworks-6.3/krnl/lib/ppc/PPC32/common \
+	-L$(WIND_HOME)/components/obj/vxworks-6.3/krnl/lib/ppc/PPC32/gnu \
+	-L$(WIND_HOME)/components/obj/vxworks-6.3/krnl/lib/ppc/PPC32/common
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_LD_PARTIAL
+ccppc -r -nostdlib -Wl,-X
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_LIBS
+$(VX_OS_LIBS)
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_OPTION_DEPEND
+-M -w
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_OPTION_GENERATE_DEPENDENCY_FILE
+-MD
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_OPTION_LANG_C
+-xc
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_OPTION_UNDEFINE_MACRO
+-U
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_RAM_HIGH_ADRS
+01000000 # RAM text/data address
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_RAM_LOW_ADRS
+00100000 # RAM text/data address
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_ROM_LINK_ADRS
+fff00000
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_ROM_SIZE
+00100000 # number of bytes of ROM space
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_ROM_TEXT_ADRS
+fff00100 # ROM entry address
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_ROM_WARM_ADRS
+fff00108 # ROM warm entry address
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_TOOL_FAMILY
+gnu
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_USR_ENTRY
+usrInit
+<END>
+
+<BEGIN> BUILD_default_romResident_MACRO_VMA_START
+0x0
+<END>
+
+<BEGIN> BUILD_default_romResident_RO_DEPEND_PATH
+{$(TGT_DIR)/h/} \
+	{$(TGT_DIR)/src/} \
+	{$(TGT_DIR)/config/} \
+	{$(TGT_DIR)/h/wrn/coreip/}
+<END>
+
+<BEGIN> BUILD_default_romResident_TC
+::tc_PPC85XXgnu
+<END>
+
+<BEGIN> BUILD_default_rom_BUILDRULE
+vxWorks_rom
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_BOOT_EXTRA
+
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_CC_ARCH_SPEC
+-mcpu=8540 -mstrict-align -msoft-float -mabi=no-spe
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_CFLAGS
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-Wall \
+	-I$(PRJ_DIR) \
+	-I$(PRJ_DIR)/../cds8548 \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DPRJ_BUILD \
+	-D_WRS_KERNEL \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_CFLAGS_AS
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-xassembler-with-cpp \
+	-I$(PRJ_DIR) \
+	-I$(PRJ_DIR)/../cds8548 \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DPRJ_BUILD \
+	-D_WRS_KERNEL \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_CFLAGS_AS_PROJECT
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h \
+	-I. \
+	-I$(TGT_DIR)/config/all \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/config \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/config/comps/src/dosfs2 \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-D_WRS_KERNEL \
+	-xassembler-with-cpp
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_CFLAGS_PROJECT
+-g \
+	-mcpu=8540 \
+	-mstrict-align \
+	-msoft-float \
+	-mabi=no-spe \
+	-ansi \
+	-fno-builtin \
+	-Wall \
+	-I$(WIND_HOME)/components/windml-4.2/h \
+	-I$(WIND_HOME)/components/dcom-2.3/h \
+	-I$(WIND_HOME)/components/opc-3.1/h \
+	-I$(WIND_HOME)/components/webcli-4.5/target/h \
+	-I$(WIND_HOME)/components/webservices-1.4/h \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/src \
+	-I$(WIND_HOME)/components/windml-4.2/osconfig/vxworks/h \
+	-I. \
+	-I$(TGT_DIR)/config/all \
+	-I$(TGT_DIR)/h \
+	-I$(TGT_DIR)/h/wrn/coreip \
+	-I$(TGT_DIR)/src/config \
+	-I$(TGT_DIR)/config/comps/src \
+	-I$(TGT_DIR)/config/comps/src/dosfs2 \
+	-I$(TGT_DIR)/src/drv \
+	-DCPU=PPC85XX \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-D_WRS_KERNEL
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_CPP
+ccppc -E -P
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_EXTRA_MODULES
+$(SUB_TARGETS)
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_HEX_FLAGS
+
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_LD_LINK_PATH
+-L$(TGT_DIR)/lib/ppc/PPC85XX/gnu \
+	-L$(TGT_DIR)/lib/ppc/PPC85XX/common \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfgnu_ppc85XX \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfcommon_ppc85XX \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfgnu \
+	-L$(TGT_DIR)/lib/ppc/PPC32/sfcommon \
+	-L$(WS_ROOT_DIR)/obj/vxworks-6.3/krnl/lib/ppc/PPC32/gnu \
+	-L$(WS_ROOT_DIR)/obj/vxworks-6.3/krnl/lib/ppc/PPC32/common \
+	-L$(WIND_HOME)/components/obj/vxworks-6.3/krnl/lib/ppc/PPC32/gnu \
+	-L$(WIND_HOME)/components/obj/vxworks-6.3/krnl/lib/ppc/PPC32/common
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_LD_PARTIAL
+ccppc -r -nostdlib -Wl,-X
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_LIBS
+$(VX_OS_LIBS)
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_OPTION_DEPEND
+-M -w
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_OPTION_GENERATE_DEPENDENCY_FILE
+-MD
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_OPTION_LANG_C
+-xc
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_OPTION_UNDEFINE_MACRO
+-U
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_RAM_HIGH_ADRS
+01000000 # RAM text/data address
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_RAM_LOW_ADRS
+00100000 # RAM text/data address
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_ROM_LINK_ADRS
+fff00000
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_ROM_SIZE
+00100000 # number of bytes of ROM space
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_ROM_TEXT_ADRS
+fff00100 # ROM entry address
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_ROM_WARM_ADRS
+fff00108 # ROM warm entry address
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_TOOL_FAMILY
+gnu
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_USR_ENTRY
+usrInit
+<END>
+
+<BEGIN> BUILD_default_rom_MACRO_VMA_START
+0x0
+<END>
+
+<BEGIN> BUILD_default_rom_RO_DEPEND_PATH
+{$(TGT_DIR)/h/} \
+	{$(TGT_DIR)/src/} \
+	{$(TGT_DIR)/config/} \
+	{$(TGT_DIR)/h/wrn/coreip/}
+<END>
+
+<BEGIN> BUILD_default_rom_TC
+::tc_PPC85XXgnu
+<END>
+
+<BEGIN> COMPONENT_ERROR_STATUS
+0
+<END>
+
+<BEGIN> CORE_INFO_TYPE
+::prj_vxWorks
+<END>
+
+<BEGIN> CORE_INFO_VERSION
+4.0
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/excArchLib.c_objects
+excArchLib.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/excArchLib.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/biosmain.c_objects
+biosmain.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/biosmain.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/linkSyms.c_customRule
+linkSyms.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/linkSyms.c_objects
+linkSyms.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/linkSyms.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/prjConfig.c_customRule
+prjConfig.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/prjConfig.c_objects
+prjConfig.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/prjConfig.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/proj_config.h_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/usrAppInit.c_objects
+usrAppInit.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/usrAppInit.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/usrRtpAppInit.c_objects
+usrRtpAppInit.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/usrRtpAppInit.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/BspSpi.c_objects
+BspSpi.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/BspSpi.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/motTsecEnd.c_objects
+motTsecEnd.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/motTsecEnd.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/romInit.s_BOOT_FILE
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/romInit.s_customRule
+romInit.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/romInit.s_objects
+romInit.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/romInit.s_tool
+assembler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/romStart.c_BOOT_FILE
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/romStart.c_customRule
+romStart.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/romStart.c_objects
+romStart.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/romStart.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/sysALib.s_customRule
+sysALib.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/sysALib.s_objects
+sysALib.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/sysALib.s_tool
+assembler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/sysLib.c_customRule
+sysLib.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/sysLib.c_objects
+sysLib.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/sysLib.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/sysMotTsecEnd.c_objects
+sysMotTsecEnd.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/sysMotTsecEnd.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/usrTffs.c_objects
+usrTffs.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/PPC8548/usrTffs.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/biosmain.c_objects
+biosmain.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/biosmain.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/bspChassis.c_objects
+bspChassis.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/bspChassis.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/bspDriver.c_objects
+bspDriver.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/bspDriver.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/ftpd6Lib.c_objects
+ftpd6Lib.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/ftpd6Lib.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/hardware.c_objects
+hardware.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/hardware.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/ispvm_ui.c_objects
+ispvm_ui.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/ispvm_ui.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/ivm_core.c_objects
+ivm_core.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/ivm_core.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/sysTffs.c_objects
+sysTffs.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/../../bsp_files/sysTffs.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> MAKEFILE
+Makefile.mk
+<END>
+
+<BEGIN> OS_NAME
+vxworks-6.0
+<END>
+
+<BEGIN> PROJECT_FILES
+$(PRJ_DIR)/../../bsp_files/PPC8548/sysALib.s \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/sysLib.c \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/romInit.s \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/romStart.c \
+	$(PRJ_DIR)/usrAppInit.c \
+	$(PRJ_DIR)/usrRtpAppInit.c \
+	$(PRJ_DIR)/prjConfig.c \
+	$(PRJ_DIR)/linkSyms.c \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/sysMotTsecEnd.c \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/motTsecEnd.c \
+	$(PRJ_DIR)/../../bsp_files/bspDriver.c \
+	$(PRJ_DIR)/../../bsp_files/bspChassis.c \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/BspSpi.c \
+	$(PRJ_DIR)/../../bsp_files/sysTffs.c \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/usrTffs.c \
+	$(PRJ_DIR)/../../bsp_files/ftpd6Lib.c \
+	$(PRJ_DIR)/proj_config.h \
+	$(PRJ_DIR)/../../bsp_files/biosmain.c \
+	$(PRJ_DIR)/../../bsp_files/hardware.c \
+	$(PRJ_DIR)/../../bsp_files/ivm_core.c \
+	$(PRJ_DIR)/../../bsp_files/ispvm_ui.c \
+	$(PRJ_DIR)/biosmain.c \
+	$(PRJ_DIR)/../../bsp_files/PPC8548/excArchLib.c
+<END>
+
+<BEGIN> WCC__CDF_PATH
+$(TGT_DIR)/config/comps/vxWorks \
+	$(TGT_DIR)/config/comps/vxWorks/arch/ppc \
+	$(TGT_DIR)/config/comps/vxWorks/net \
+	$(TGT_DIR)/config/comps/vxWorks/net/apps \
+	$(TGT_DIR)/config/comps/vxWorks/tool/gnu \
+	$(PRJ_DIR)/../cds8548 \
+	$(PRJ_DIR)
+<END>
+
+<BEGIN> WCC__CURRENT
+cds8548
+<END>
+
+<BEGIN> WCC__LIST
+cds8548
+<END>
+
+<BEGIN> WCC__MXR_LIBS
+
+<END>
+
+<BEGIN> WCC_cds8548_COMPONENTS
+INCLUDE_CACHE_SUPPORT \
+	INCLUDE_MMU_BASIC \
+	INCLUDE_MMU_GLOBAL_MAP \
+	INCLUDE_SYSCLK_INIT \
+	INCLUDE_SIO \
+	INCLUDE_TTY_DEV \
+	INCLUDE_SW_FP \
+	INCLUDE_SEM_BINARY_CREATE \
+	INCLUDE_SEM_COUNTING_CREATE \
+	INCLUDE_MSG_Q_CREATE_DELETE \
+	INCLUDE_MIB2_IF \
+	INCLUDE_NETWORK \
+	INCLUDE_DOSFS \
+	INCLUDE_END \
+	INCLUDE_IF \
+	INCLUDE_APPL_LOG_UTIL \
+	INCLUDE_NET_BOOT \
+	INCLUDE_NETMASK_GET \
+	INCLUDE_NET_DAEMON \
+	INCLUDE_IPV4 \
+	INCLUDE_DHCPC_LEASE_CLEAN \
+	INCLUDE_MUX \
+	INCLUDE_END_POLLED_STATS \
+	INCLUDE_ETHERNET \
+	INCLUDE_GETADDRINFO \
+	INCLUDE_NET_HOST_SETUP \
+	INCLUDE_NET_HOST_SHOW \
+	INCLUDE_HOST_TBL \
+	INCLUDE_ICMP_SHOW \
+	INCLUDE_ICMPV4 \
+	INCLUDE_NET_IF_SHOW \
+	INCLUDE_IFLIB \
+	INCLUDE_IGMP_SHOW \
+	INCLUDE_INETLIB \
+	INCLUDE_NET_INIT \
+	INCLUDE_ROUTE_STORAGE \
+	INCLUDE_ROUTE \
+	INCLUDE_LOOPBACK \
+	INCLUDE_ROUTING_SOCKET \
+	INCLUDE_NETPOOLSHOW \
+	INCLUDE_NETBUFPOOL \
+	INCLUDE_LINKBUFPOOL \
+	INCLUDE_NET_SHOW \
+	INCLUDE_PING \
+	INCLUDE_NET_BOOT_CONFIG \
+	INCLUDE_IPATTACH \
+	INCLUDE_RAWV4 \
+	INCLUDE_BOOT_LINE_INIT \
+	INCLUDE_NET_ROUTE_SHOW \
+	INCLUDE_NBIO_LOG \
+	INCLUDE_TCPV4 \
+	INCLUDE_TCP_SHOW \
+	INCLUDE_TELNET \
+	INCLUDE_UDP_SHOW \
+	INCLUDE_UDPV4 \
+	INCLUDE_SYS_START \
+	INCLUDE_SYSHW_INIT \
+	INCLUDE_EDR_STUB \
+	INCLUDE_BASE_KERNEL \
+	INCLUDE_SEM_LIB \
+	INCLUDE_ANSI_ASSERT \
+	INCLUDE_ANSI_CTYPE \
+	INCLUDE_ANSI_LOCALE \
+	INCLUDE_ANSI_MATH \
+	INCLUDE_ANSI_STDIO \
+	INCLUDE_ANSI_STDLIB \
+	INCLUDE_ANSI_STRING \
+	INCLUDE_ANSI_TIME \
+	INCLUDE_ANSI_STDIO_EXTRA \
+	INCLUDE_FORMATTED_IO \
+	INCLUDE_KERNEL \
+	INCLUDE_IO_SYSTEM \
+	INCLUDE_STDIO \
+	INCLUDE_MEM_MGR_FULL \
+	INCLUDE_TASK_CREATE_DELETE \
+	INCLUDE_ENV_VARS \
+	INCLUDE_MEM_MGR_BASIC \
+	INCLUDE_SIGNALS \
+	INCLUDE_FORMATTED_OUT_BASIC \
+	INCLUDE_CTORS_DTORS \
+	INCLUDE_PIPES \
+	INCLUDE_MSG_Q \
+	INCLUDE_SEM_BINARY \
+	INCLUDE_TASK_HOOKS \
+	INCLUDE_WATCHDOGS \
+	INCLUDE_SPY \
+	INCLUDE_TIMEX \
+	INCLUDE_USER_APPL \
+	INCLUDE_EXC_HANDLING \
+	INCLUDE_OBJ_LIB \
+	INCLUDE_SEM_MUTEX \
+	INCLUDE_SEM_COUNTING \
+	INCLUDE_SEM_DELETE \
+	INCLUDE_SEM_MUTEX_CREATE \
+	INCLUDE_WATCHDOGS_CREATE_DELETE \
+	INCLUDE_TASK_VARS \
+	INCLUDE_JOB_TASK \
+	INCLUDE_REBOOT_HOOKS \
+	INCLUDE_EXC_TASK \
+	INCLUDE_TASK_RESTART \
+	INCLUDE_HOOKS \
+	INCLUDE_EDR_PM \
+	INCLUDE_EDR_SYSDBG_FLAG \
+	INCLUDE_LOGGING \
+	INCLUDE_VX_TRADITIONAL_SCHEDULER \
+	INCLUDE_FLOATING_POINT \
+	INCLUDE_SELECT \
+	INCLUDE_TYLIB \
+	INCLUDE_POOL \
+	INCLUDE_SET \
+	INCLUDE_BUF_MGR \
+	INCLUDE_WDB \
+	INCLUDE_WDB_BANNER \
+	INCLUDE_WDB_BP \
+	INCLUDE_WDB_CTXT \
+	INCLUDE_WDB_DIRECT_CALL \
+	INCLUDE_WDB_EVENTPOINTS \
+	INCLUDE_WDB_EVENTS \
+	INCLUDE_WDB_EXC_NOTIFY \
+	INCLUDE_WDB_EXIT_NOTIFY \
+	INCLUDE_WDB_FUNC_CALL \
+	INCLUDE_WDB_GOPHER \
+	INCLUDE_WDB_MEM \
+	INCLUDE_WDB_REG \
+	INCLUDE_WDB_START_NOTIFY \
+	INCLUDE_WDB_USER_EVENT \
+	INCLUDE_WDB_VIO \
+	INCLUDE_WDB_VIO_LIB \
+	INCLUDE_WDB_TASK \
+	INCLUDE_WDB_COMM_NETWORK \
+	INCLUDE_WDB_POST_KERNEL_INIT \
+	INCLUDE_SHELL \
+	INCLUDE_SYM_TBL_SHOW \
+	INCLUDE_VXBUS \
+	INCLUDE_PLB_BUS \
+	INCLUDE_HWMEM_ALLOC \
+	INCLUDE_CACHE_L2 \
+	INCLUDE_SPE
+<END>
+
+<BEGIN> WCC_cds8548_IMPLICIT_COMPONENTS
+INCLUDE_MEMORY_CONFIG \
+	INCLUDE_CACHE_ENABLE \
+	INCLUDE_AUX_CLK \
+	INCLUDE_BSP_MACROS \
+	INCLUDE_HW_FP \
+	INCLUDE_FS_EVENT_UTIL \
+	INCLUDE_RAWFS \
+	INCLUDE_ERF \
+	INCLUDE_FS_MONITOR \
+	INCLUDE_XBD \
+	INCLUDE_DEVICE_MANAGER \
+	INCLUDE_JOB_QUEUE \
+	INCLUDE_GTF \
+	INCLUDE_ARP_API \
+	INCLUDE_BSD_SOCKET \
+	INCLUDE_SOCKLIB \
+	INCLUDE_NET_POOL \
+	INCLUDE_DOSFS_MAIN \
+	INCLUDE_DOSFS_FMT \
+	INCLUDE_DOMAIN_INIT \
+	INCLUDE_NET_FUNCBIND \
+	INCLUDE_NET_SYSCTL \
+	INCLUDE_GETSERVBYNAME \
+	INCLUDE_GTF_TIMER_START \
+	INCLUDE_IFINDEX \
+	INCLUDE_IGMP \
+	INCLUDE_NETBUFLIB \
+	INCLUDE_OLDROUTE \
+	INCLUDE_GETIFADDRS \
+	INCLUDE_NET_MD5 \
+	INCLUDE_STRICMP \
+	INCLUDE_KERN_RANDOM \
+	INCLUDE_NET_ROUTE_SHOW_SNPRINTF \
+	INCLUDE_SYSCTL \
+	INCLUDE_OFFSET_SYMBOLS \
+	INCLUDE_SELECT_SUPPORT \
+	INCLUDE_CLASS_LIB \
+	INCLUDE_CHECKSUM \
+	INCLUDE_ANSI_STRDUP \
+	INCLUDE_ANSI_STRERROR \
+	INCLUDE_ANSI_ABS \
+	INCLUDE_ANSI_ABORT \
+	INCLUDE_ANSI_STRCMP \
+	INCLUDE_ANSI_LONGJMP \
+	INCLUDE_SIGNAL_ARCH \
+	INCLUDE_ANSI_STRLEN \
+	INCLUDE_ANSI_BSEARCH \
+	INCLUDE_ANSI_STRCPY \
+	INCLUDE_ANSI_ATOF \
+	INCLUDE_ANSI_STRTOD \
+	INCLUDE_ANSI_STDLIB_NUMBERS \
+	INCLUDE_BLIB \
+	INCLUDE_ANSI_MEMCHR \
+	INCLUDE_ANSI_MEMCPY \
+	INCLUDE_ANSI_MEMSET \
+	INCLUDE_ANSI_MEMCMP \
+	INCLUDE_ANSI_MEMMOVE \
+	INCLUDE_ANSI_STRCAT \
+	INCLUDE_ANSI_STRNCAT \
+	INCLUDE_ANSI_STRNCMP \
+	INCLUDE_ANSI_STRCASECMP \
+	INCLUDE_ANSI_STRNCASECMP \
+	INCLUDE_ANSI_STRNCPY \
+	INCLUDE_ANSI_STRLCPY \
+	INCLUDE_POSIX_CLOCKS \
+	INCLUDE_GNU_INTRINSICS \
+	INCLUDE_POSIX_DIRLIB \
+	INCLUDE_TASK_SHOW \
+	INCLUDE_HANDLE_SHOW \
+	INCLUDE_MSG_Q_INFO \
+	INCLUDE_SEM_INFO \
+	INCLUDE_VXEVENTS \
+	INCLUDE_DLL \
+	INCLUDE_KERNEL_ARCH \
+	INCLUDE_Q_LIB \
+	INCLUDE_Q_FIFO \
+	INCLUDE_Q_PRI_LIST \
+	INCLUDE_Q_PRI_BMAP \
+	INCLUDE_Q_PRI_DELTA \
+	INCLUDE_SLL \
+	INCLUDE_MSG_Q_EVENTS \
+	INCLUDE_SEM_EVENTS \
+	INCLUDE_TASK_INFO \
+	INCLUDE_AVL_UINT_TREES \
+	INCLUDE_PTYDRV \
+	INCLUDE_FP_TYPE \
+	INCLUDE_POSIX_FS \
+	INCLUDE_LSTLIB \
+	INCLUDE_RNG_BUF \
+	INCLUDE_HASH \
+	INCLUDE_WDB_TASK_HOOKS \
+	INCLUDE_WDB_BP_SYNC \
+	INCLUDE_WDB_TASK_BP \
+	INCLUDE_WDB_TASK_REG \
+	INCLUDE_DEBUG \
+	INCLUDE_COPROCESSOR \
+	INCLUDE_WDB_MDL_SYM_SYNC \
+	INCLUDE_STANDALONE_SYM_TBL \
+	INCLUDE_SHELL_VI_MODE \
+	INCLUDE_LOADER \
+	INCLUDE_UNLOADER \
+	INCLUDE_MODULE_MANAGER \
+	INCLUDE_LOADER_CODE \
+	INCLUDE_SYM_TBL \
+	INCLUDE_SYM_TBL_INIT \
+	INCLUDE_DEFERRED_INTERRUPT_ENABLE \
+	INCLUDE_SHELL_INTERP_C \
+	INCLUDE_DOSFS_FAT \
+	INCLUDE_DOSFS_CHKDSK \
+	INCLUDE_DOSFS_DIR_VFAT \
+	INCLUDE_DOSFS_DIR_FIXED \
+	INCLUDE_VXBUS_INIT \
+	INCLUDE_VXBUS_ACTIVATE \
+	INCLUDE_AIM_CACHE \
+	INCLUDE_COPROCESSOR_SHOW \
+	INCLUDE_CACHE_L2_ENABLE \
+	INCLUDE_BLIB_ARCH \
+	INCLUDE_OBJ_LIB_ARCH
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ADDIF_ADDR
+"192.168.1.1"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ADDIF_MASK
+0xffff0000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ADDIF_NAME
+"fei"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ADDIF_NUM
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_AIM_MMU_INIT_PT_INCR
+0x20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_AIM_MMU_INIT_PT_NUM
+0x40
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_AIM_MMU_INIT_RT_INCR
+0x10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_AIM_MMU_INIT_RT_NUM
+0x10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_AIO_TASK_PRIORITY
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_AIO_TASK_STACK_SIZE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ALTQ_DEFAULT_QUEUE_LIMIT
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ALTQ_DEFAULT_QUEUE_PRIORITY
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ALTQ_DISPATCH_QUEUE_MAX_LEN
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ALTQ_MACH_CLOCK_FREQ
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ALTQ_MACH_CLOCK_INIT_HOOK
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ALTQ_MACH_CLOCK_READ_HOOK
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ALTQ_MAX_QUEUE_ALLOWED
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ALTQ_USE_MACH_CLOCK
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_APPL_KERN_LOG_FD_CFG
+KERN_LOG_FD
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_APPL_KERN_LOG_LEVEL_CFG
+(_LOG_DEC_DFLT | _LOG_LVL_DFLT)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_APPL_LOG_FD_CFG
+STD_OUT
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_APPL_LOG_LEVEL_CFG
+(_LOG_DEC_DFLT | _LOG_LVL_DFLT)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_DEBUG_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_GRATUITUOUS_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_HOST_DOWN_TIME_CFG
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_MAXTRIES_CFG
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_MAX_AGE_CFG
+(20*60)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_MAX_ENTRIES_CFG
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_PROXYALL_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_PRUNE_INTVL_CFG
+(5*60)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_REGISTER_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ARP_USELOOPBACK_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_AUX_CLK_RATE_MAX
+8000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_AUX_CLK_RATE_MIN
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_BOOT_LINE_ADRS
+((char *) (LOCAL_MEM_LOCAL_ADRS+BOOT_LINE_OFFSET))
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_BOOT_LINE_OFFSET
+0x4200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_BOOT_LINE_SIZE
+255
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_BPF_BUFSIZE_CFG
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_BSP_REV
+"/2"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_BSP_VERSION
+"2.0"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CDROM_COM_BUF_SIZE
+3
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CLNT_TBL_SZ_CFG
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CONSOLE_BAUD_RATE
+19200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CONSOLE_TTY
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CORE_DUMP_CKSUM_ENABLE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CORE_DUMP_COMPRESSION_LEVEL
+9
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CORE_DUMP_MAX_HOOKS
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CORE_DUMP_MEM_FILTER_MAX
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CORE_DUMP_REGION_SIZE
+pmFreeSpace(pmDefaultArena)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CORE_DUMP_SKIP_TEXT_SECTION
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CORE_DUMP_SKIP_USER_RESERVED_MEM
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_CORE_DUMP_STACK_SIZE
+8192
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DEFAULT_BOOT_LINE
+"mottsec(0,0)host:vxWorks h=192.168.0.1 e=192.168.0.2 u=weihu pw=cjhyy300 f=0x0"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DEVICE_MANAGER_MAX_NUM_DEVICES
+255
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_DOWNLINK_IF
+"motscc0"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_DPORT
+546
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_KEY_EXPIRE_STRING
+"forever"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_KEY_REALM_STRING
+"dhcpv6Admin"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_KEY_SECRET_STRING
+"5pvW2g48OHPvkYMJSw0vZA=="
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_OPTION
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_PRIORITY
+80
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_SIZE
+10000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_UPLINK_IF
+"motfcc0"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_UPORT
+547
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6C_VERBOSE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_DOWNLINK_IF
+"motscc0"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_DPORT
+546
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_HOP_LIMIT
+32
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_PRIORITY
+80
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_SERVER_ADDR
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_SIZE
+10000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_SRC_ADDR
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_UPLINK_IF
+"motfcc0"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_UPORT
+547
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6R_VERBOSE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6S_CONF_FILE_NAME
+"dhcp6s.conf"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6S_DOWNLINK_IF
+"motscc0"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6S_DPORT
+546
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6S_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6S_PRIORITY
+80
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6S_RAMDISK_SIZE
+512*32
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6S_SIZE
+10000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6S_UPORT
+547
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP6S_VERBOSE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPC_CPORT
+68
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPC_DEFAULT_LEASE
+3600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPC_DISCOVER_RETRIES
+4
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPC_MAX_LEASES
+4
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPC_MAX_MSGSIZE
+590
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPC_MIN_LEASE
+30
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPC_OFFER_TIMEOUT
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPC_SPORT
+67
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPR_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPS_ADDRESS_HOOK
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPS_CPORT
+68
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPS_DEFAULT_LEASE
+3600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPS_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPS_LEASE_HOOK
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPS_MAX_MSGSIZE
+590
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCPS_SPORT
+67
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DHCP_MAX_HOPS
+4
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DNS_CLIENT_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DNS_DEBUG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DOSFS_DEFAULT_CACHE_SIZE
+0x8000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DOSFS_DEFAULT_CREATE_OPTIONS
+0x04
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DOSFS_DEFAULT_MAX_FILES
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DO_TCPDRAIN_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_128
+200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_16K
+4
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_1K
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_256
+40
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_2K
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_32
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_32K
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_4K
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_512
+40
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_64
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_64K
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_DATA_8K
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DSI_NUM_SOCKETS
+200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DYN_ACK_LIFETIME_CFG
+300
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DYN_BUCKETS_CFG
+256
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DYN_FIN_LIFETIME_CFG
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DYN_MAX_CFG
+1000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DYN_RST_LIFETIME_CFG
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DYN_SHORT_LIFETIME_CFG
+30
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DYN_SYN_LIFETIME_CFG
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_DYN_UDP_LIFETIME_CFG
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_EDR_ERRLOG_SIZE
+(pmFreeSpace(EDR_PM_ARENA)/2)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_EDR_RECORD_SIZE
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ENV_VAR_USE_HOOKS
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ERF_MAX_USR_CATEGORIES
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ERF_MAX_USR_TYPES
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_EXC_MSG_ADRS
+((char *) (LOCAL_MEM_LOCAL_ADRS+EXC_MSG_OFFSET))
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_EXC_MSG_OFFSET
+0x4300
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FASTFORWARDING_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FASTUDP6_DEBUG_CFG
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FASTUDP_DEBUG_CFG
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FATAL_SYSTEM_CORE_DUMP_ENABLE
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FD_0_TYPE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FD_1_TYPE
+-1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FD_DEV_NAME
+"/fd"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FF_IPV4_FIB_DISP_TBL
+ptRibDispatchTable
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FF_IPV4_INIT_RTN
+ipFFInit
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FF_IPV6_FIB_DISP_TBL
+avlRibDispatchTable
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FF_IPV6_INIT_RTN
+ipFFInit
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FREE_RAM_ADRS
+(end)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTP6_REPLYTIMEOUT
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTP6_SERVER_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTPD6_GUEST_1
+"anonymous"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTPD6_GUEST_2
+"anonymous"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTPD6_GUEST_3
+"anonymous"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTPD6_GUEST_DIR_VALIDATE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTPD6_GUEST_ROOT_DIR
+"/anon"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTPD6_GUEST_UPLOAD_DIR
+"/anon"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTPD6_LOGINRTN
+(FUNCPTR)loginUserVerify
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTPD6_OPTIONS_STRING
+""
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTPD6_SSIZE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTP_DEBUG_OPTIONS
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTP_TIMEOUT
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTP_TRANSIENT_FATAL
+ftpTransientFatal
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTP_TRANSIENT_MAX_RETRY_COUNT
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_FTP_TRANSIENT_RETRY_INTERVAL
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_GTF_BINPOWGRANSCALE_CFG
+2
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_GTF_BINPOWTIMERSLOT_CFG
+9
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_GTF_HZ_CFG
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_GTF_NBRTIMERUNIT_CFG
+7
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_GTF_SIZETIMERFREEQUEUE_CFG
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_HRFS_DEFAULT_MAX_BUFFERS
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_HRFS_DEFAULT_MAX_FILES
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_HWMEM_POOL_SIZE
+50000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPBMCASTECHO_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPERRORLEN_CFG
+64
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPLIM_CFG
+200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPMASKREPL_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV4_MTU_MIN_CFG
+296
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV4_TIMESTAMP_REQ_SUPPORT_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV4_VALIDATION_REQ_CFG
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV6CTL_ERRPPSLIMIT_CFG
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV6CTL_MLD_MAXSRCFILTER_CFG
+128
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV6CTL_MLD_SOMAXSRC_CFG
+64
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV6CTL_MLD_VERSION_CFG
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV6CTL_NODEINFO_CFG
+3
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV6CTL_REDIRACCEPT_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV6CTL_REDIRTIMEOUT_CFG
+600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMPV6_MTU_MIN_CFG
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMP_DROP_REDIRECT_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMP_LOG_REDIRECT_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ICMP_MAY_RST_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IFF_INET6_UP_CFG
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IFQ_MAXLEN_CFG
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IF_INDEXLIM_CFG
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IGNORE_LINKLOCAL
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_INCLUDE_WDB_TTY_TEST
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_INIT_NBIO_MSGS
+32
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_INTERRUPT_STACK_OVERFLOW_SIZE
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_INTERRUPT_STACK_UNDERFLOW_SIZE
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_INT_LOCK_LEVEL
+0x0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IP6INTRQ_IFQ_MAXLEN_CFG
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPFORWARDING_CFG
+ipForwardCfg
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPINTRQ_IFQ_MAXLEN_CFG
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPPORT_HIFIRSTAUTO_CFG
+49152
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPPORT_HILASTAUTO_CFG
+65535
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPPORT_RESERVEDSTART_CFG
+600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPPORT_RESERVED_CFG
+1024
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPPORT_USERRESERVED_CFG
+5000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPSENDREDIRECTS_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPSTEALTH_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV4_RT_DISP_TBL
+ptRibDispatchTable
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_ACCEPT_RTADV_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_AUTO_FLOWLABEL_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_AUTO_LINKLOCAL_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_DAD_COUNT_CFG
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_DEFHLIM_CFG
+64
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_DEFMCASTHLIM_CFG
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_FORWARDING_CFG
+ipForwardCfg
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_GIF_HLIM_CFG
+30
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_HDRNESTLIMIT_CFG
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_KEEPFAITH_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_LOG_INTERVAL_CFG
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_MAXFRAGPACKETS_CFG
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_MCAST_PMTU_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_PREFER_TEMPADDR_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_RR_PRUNE_CFG
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_RTEXPIRE_CFG
+3600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_RTMAXCACHE_CFG
+128
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_RTMINEXPIRE_CFG
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_RTTIMEOUT_CFG
+3600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_SENDREDIRECTS_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_USE_DEPRECATED_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6CTL_V6ONLY_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IPV6_RT_DISP_TBL
+avlRibDispatchTable
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IP_ACCEPTSOURCEROUTE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IP_CHECKINTERFACE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IP_DEFTTL_CFG
+64
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IP_DOSOURCEROUTE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IP_MAXFRAGPACKETS_CFG
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IP_MAXFRAGSPERPACKET_CFG
+45
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_IP_MAX_UNITS
+4
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ISR_STACK_SIZE
+(5000)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_JOB_TASK_STACK_SIZE
+8000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_KERNEL_APPL_CORE_DUMP_ENABLE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_KERNEL_HEAP_SIZE
+(((sysMemTop() - FREE_RAM_ADRS) / 3) * 2)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_LOCAL_MEM_LOCAL_ADRS
+0x00000000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_LOCAL_MEM_SIZE
+0x20000000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_LOGIN_PASSWORD
+"RcQbRbzRyc"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_LOGIN_USER_NAME
+"target"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_LOG_ARP_WRONG_IFACE_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MAXSOCKBUF_CFG
+(SB_MAX) ? (SB_MAX) : (256*1024)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MAX_AIO_SYS_TASKS
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MAX_ISR_JOBS
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MAX_LINKHDR_CFG
+32
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MAX_LIO_CALLS
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MAX_LOG_MSGS
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MAX_PROTOHDR_CFG
+60
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MAX_REBOOT_HOOKS
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MEDR_BLOCK_GUARD_ENABLE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MEDR_EXTENDED_ENABLE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MEDR_FILL_FREE_ENABLE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MEDR_FREE_QUEUE_LEN
+64
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MEDR_POOL_SIZE
+0x100000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2IF_LONG_COUNTERS
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2IF_TRAP_ARG
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2IF_TRAP_RTN
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2IPV6_MAX_ROUTE_TBL_SIZE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2IP_MAX_ROUTE_TBL_SIZE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2SYS_CONTACT
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2SYS_DESCR
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2SYS_LOCATION
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2SYS_OID
+{0, 0}
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIB2SYS_OID_LEN
+2
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIPV6CTL_DEBUG_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIPV6CTL_RR_HINT_PPSLIM_CFG
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MIPV6CTL_USE_IPSEC_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MLDR_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MLPPP_BUNDLE_AUTH
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MLPPP_EID
+"1-WIND"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MLPPP_MRRU
+2000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MLPPP_SHORT_SEQNO
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MLPPP_STATIC_BUNDLE_ADDITION
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MP_RECEIVE_QUEUE_SIZE
+2048
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MP_RECEIVE_QUEUE_TASK_PRIORITY
+85
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MP_SEND_QUEUE_SIZE
+2048
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MP_SEND_QUEUE_TASK_PRIORITY
+80
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MQ_HASH_SIZE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MUX_L2_MAX_VLANS_CFG
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_MUX_L2_NUM_PORTS_CFG
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_DEBUG_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_DELAY_CFG
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_MAXNUDHINT_CFG
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_MAXQUEUELEN_CFG
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_MMAXTRIES_CFG
+3
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_PRUNE_CFG
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_TEMPPLTIME_CFG
+86400
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_TEMPVLTIME_CFG
+604800
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_UMAXTRIES_CFG
+3
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_USELOOPBACK_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ND6_USETEMPADDR_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NET_JOB_NUM_CFG
+85
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NET_TASK_OPTIONS
+VX_SUPERVISOR_MODE | VX_UNBREAKABLE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NET_TASK_PRIORITY
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NET_TASK_STACKSIZE
+10000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NFS2_CLIENT_CACHE_DEFAULT_LINE_SIZE
+16384
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NFS2_CLIENT_CACHE_DEFAULT_NUM_LINES
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NFS2_CLIENT_CACHE_DEFAULT_OPTIONS
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NFS3_CLIENT_CACHE_DEFAULT_LINE_SIZE
+16384
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NFS3_CLIENT_CACHE_DEFAULT_NUM_LINES
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NFS3_CLIENT_CACHE_DEFAULT_OPTIONS
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NFS_MAXFILENAME
+40
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NFS_MAXPATH
+255
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NFS_SERVER_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NMBCLUSTERS_CFG
+64
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NSCOUNT_CFG
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_1024
+25
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_128
+400
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_16384
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_2048
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_256
+40
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_32768
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_4096
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_512
+40
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_64
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_65536
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_8192
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_CLBLKS
+NUM_DAT_64 \
+	+ \
+	NUM_DAT_128 \
+	+ \
+	NUM_DAT_256 \
+	+ \
+	NUM_DAT_512 \
+	+ \
+	NUM_DAT_1024 \
+	+ \
+	NUM_DAT_2048 \
+	+ \
+	NUM_DAT_4096 \
+	+ \
+	NUM_DAT_8192 \
+	+ \
+	NUM_DAT_16384 \
+	+ \
+	NUM_DAT_32768 \
+	+ \
+	NUM_DAT_65536
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DAT_MBLKS
+NUM_DAT_CLBLKS
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DOSFS_FILES
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_DRIVERS
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_FILES
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_RAWFS_FILES
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SIGNAL_QUEUES
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_1024
+30
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_128
+150
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_16
+250
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_2048
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_256
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_32
+200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_512
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_64
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_CLBLKS
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_SYS_MBLKS
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NUM_TTY
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NV_BOOT_OFFSET
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_NV_RAM_SIZE
+(0x2000 - 0x10)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_OBJ_LIBRARY_OPTIONS
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DATPOOL
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_1024
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_128
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_16384
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_2048
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_256
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_32768
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_4096
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_512
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_64
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_65536
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_DAT_8192
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_SYSPOOL
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_SYS_1024
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_SYS_128
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_SYS_16
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_SYS_2048
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_SYS_256
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_SYS_32
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_SYS_512
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMA_SYS_64
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DATPOOL
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_1024
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_128
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_16384
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_2048
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_256
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_32768
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_4096
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_512
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_64
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_65536
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_DAT_8192
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_SYSPOOL
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_SYS_1024
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_SYS_128
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_SYS_16
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_SYS_2048
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_SYS_256
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_SYS_32
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_SYS_512
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PMS_SYS_64
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PM_RESERVED_MEM
+(6 * VM_PAGE_SIZE)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PORT_TBL_SZ_CFG
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_POSIX_PTHREAD_RR_TIMESLICE
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPPOE_DEV_NAME
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPPOE_DEV_UNIT
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPPOE_MAX_SERVICES
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPPOE_MIN_MRU
+1280
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPPOE_MIN_MTU
+1280
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPPOE_MRU
+1492
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPPOE_MTU
+1492
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPPOE_OPERATING_MODE
+0x2
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPPOE_SERVICE_NAME
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_APPL_CALLBACKS_VERBOSE
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_BAUDRATE
+19200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CLNT_GET_DNS
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CLNT_IPCP_ACCEPT_LOCAL
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CLNT_IPCP_ACCEPT_REMOTE
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CLNT_MODEM_INIT_STRING
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CLNT_PHONE_NUMBER_TO_DIAL
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CLNT_SET_DEFAULTROUTE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CLNT_USE_CHAP_AUTH
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CLNT_USE_PAP_AUTH
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CONNECT_DELAY
+30
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CONTROL_JOB_QUEUE_SIZE
+2048
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_CONTROL_TASK_PRIORITY
+80
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_DATA_JOB_QUEUE_SIZE
+2048
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_DATA_TASK_PRIORITY
+85
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_DISCONNECT_DELAY
+30
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_IPCP_CONF_REQ_INTERVAL
+3
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_IPCP_MAX_CONFIGURE
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_IPCP_MAX_TERMINATE
+2
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_IPCP_TERM_REQ_INTERVAL
+3
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_LCP_CONF_REQ_INTERVAL
+3
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_LCP_ECHO_INTERVAL
+180
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_LCP_ECHO_MAX_RETRIES
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_LCP_MAX_CONFIGURE
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_LCP_MAX_FAILURE
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_LCP_MAX_TERMINATE
+2
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_LCP_SEND_ECHOES
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_LCP_TERM_REQ_INTERVAL
+3
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_MAGIC_NUMBER_LOCAL_RANGE
+"1,2147483647,0"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_MAGIC_NUMBER_REMOTE_RANGE
+"1,2147483647,0"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_MEM_PART_ID
+memSysPartId
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_MIN_MRU
+1280
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_MIN_MTU
+1280
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_MRU
+1500
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_MTU
+1500
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_NET_POOL_ID
+_pNetDpool
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_NUM_SIO_CHANNELS
+NUM_TTY
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_PAP_AUTH_REQ_INTERVAL
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_PAP_MAX_AUTHREQ
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_PASSWORD1
+"vxTarget"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_PASSWORD2
+"vxPPPClient"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_CHAP_CHALLENGE_INTERVAL
+180
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_IPCP_ACCEPT_REMOTE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_IPCP_ASSIGNS_ADDRESSES
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_IPCP_LOCAL_ADDRESS_SPECIFY
+"10.0.0.9"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_IPCP_POOL_SIZE
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_IPCP_POOL_START_ADDR
+"10.0.0.10"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_IPCP_PRIMARY_DNS
+"10.0.0.40"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_IPCP_SECONDARY_DNS
+"10.0.0.50"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_USE_CHAP_AUTH
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_RAS_USE_PAP_AUTH
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_SERVER_MODE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_SILENT_MODE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_SILENT_RESTART
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_SILENT_RESTART_INTRVL
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_STR_ASYNCMAP
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_STR_PEER_TYPE
+"REGULAR"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_SYSTEM_DEFAULT_FRAMEWORK_NAME
+"SYS_PPP"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_TTY
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_USER_NAME1
+"vxTarget"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_USER_NAME2
+"vxPPPClient"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_USE_ACFC
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_USE_LOCAL_MAGIC_NUMBER
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_USE_PFC
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_USE_VJC_LOCAL
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_USE_VJC_REMOTE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_VJC_LOCAL_MAX_SLOTS
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PPP_VJC_REMOTE_MAX_SLOTS
+16
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PROXYD_MAIN_ADDRESS
+sysBootParams.ead
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PROXYD_PROXY_ADDRESS
+sysBootParams.bad
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PROXY_ARP_SERVER_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PROXY_ARP_VERBOSE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PROXY_BROADCAST_FWD_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_PROXY_BROADCAST_VERBOSE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_QOS_DEFAULT_PRI
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_QOS_JOBQ
+netJobQueueId
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_QOS_JOBQ_PRI
+NET_TASK_QJOB_PRI - 1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RAM_HIGH_ADRS
+0x04000000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RAM_LOW_ADRS
+0x03e00000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RARP_DEBUG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RAW_MAXDGRAM_CFG
+8192
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RAW_RECVSPACE_CFG
+8192
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RDISC_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RDISC_OPTIONS
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RDISC_PRIORITY
+128
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RDISC_STACKSIZE
+20000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RESERVED
+0x4400
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RESOLVER_DOMAIN
+"my.domain"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RESOLVER_DOMAIN_SERVER
+"192.168.0.6"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RES_OPTIONS_CFG
+RES_DEFAULT
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RES_TIMEOUT_CFG
+RES_TIMEOUT
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RETRY_CFG
+2
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIPNG_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIPNG_OPTIONS_STRING
+""
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIPNG_PRIORITY
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_AUTH_TYPE
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_EXPIRE_TIME
+180
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_GARBAGE_TIME
+300
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_GATEWAY
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_IF_INIT
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_MULTICAST
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_ROUTING_SOCKET_BUF_SIZE
+8192
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_SUPPLIER
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_SUPPLY_INTERVAL
+30
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_TIMER_RATE
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RIP_VERSION
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RLOGIN_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ROM_BASE_ADRS
+0xFFF40000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ROM_SIZE
+0x000c0000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ROM_TEXT_ADRS
+0xFFF40100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ROOT_STACK_SIZE
+(24000)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ROUTE_DEFAULT_WEIGHT
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_ROUTE_SHOW_MEM
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RPC_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RSH_STDERR_SETUP_TIMEOUT
+-1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTADV_COMMAND
+""
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTADV_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTEXPIRE_CFG
+(60*60)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTMAXCACHE_CFG
+128
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTMINEXPIRE_CFG
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTP_FD_NUM_MAX
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTP_HEAP_INIT_SIZE
+0x10000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTP_HOOK_TBL_SIZE
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTP_SIGNAL_QUEUE_SIZE
+32
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTSOL_COMMAND
+""
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_RTSOL_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_AUTO_ASCONF_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_DEBUG_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_DEFAULT_COOKIE_LIFE_CFG
+60
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_DEF_MAX_INIT_CFG
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_DEF_MAX_SEND_CFG
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_DEF_MAX_SHUTDOWN_SEC_CFG
+180
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_DEF_PMTU_RAISE_SEC_CFG
+600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_DEF_SECRET_LIFE_SEC_CFG
+3600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_DELAYED_SACK_TIME_DEF_CFG
+200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_ECN_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_ECN_NONCE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_HEARTBEAT_INTERVAL_DEF_CFG
+30000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_MAX_BURST_DEF_CFG
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_MAX_CHUNKS_ON_QUEUE_CFG
+512
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_NO_CKSUM_ON_LOOPBACK_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_OSTREAM_INITIAL_CFG
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_PEER_CHUNK_OH_CFG
+sizeof(struct mbuf)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_RECVSPACE_CFG
+128 * (1024 + sizeof(struct sockaddr_in))
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_RTO_INITIAL_CFG
+(3000)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_RTO_LOWER_BOUND_CFG
+(1000)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_RTO_UPPER_BOUND_CFG
+(60000)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_SENDSPACE_CFG
+(128 * 1024)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_STRICT_INIT_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SCTP_STRICT_SACKS_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SD_HOOK_TBL_SIZE
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_COMPATIBLE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_DEFAULT_CONFIG
+"LINE_EDIT_MODE=,LINE_LENGTH=256,STRING_FREE=manual,INTERPRETER=,VXE_PATH=.;/romfs"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_FIRST_CONFIG
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_REMOTE_CONFIG
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_SECURE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_STACK_SIZE
+(0x10000)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_START_AT_BOOT
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_TASK_NAME_BASE
+"tShell"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_TASK_OPTIONS
+(VX_FP_TASK | VX_UNBREAKABLE | COPROCS_ALL | VX_PRIVATE_ENV)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHELL_TASK_PRIORITY
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SHM_DEV_NAME
+"/shm"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SIO_MAX_SEND_QUEUE_SIZE
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SIZ_SYS_1024
+1144
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SIZ_SYS_128
+172
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SIZ_SYS_16
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SIZ_SYS_2048
+2048
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SIZ_SYS_256
+292
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SIZ_SYS_32
+44
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SIZ_SYS_512
+664
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SIZ_SYS_64
+96
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_ANCHOR_ADRS
+((sysProcNumGet() \
+	== \
+	0) \
+	? \
+	((char*) \
+	(LOCAL_MEM_LOCAL_ADRS \
+	+ \
+	SM_ANCHOR_OFFSET)) \
+	: \
+	((char*) \
+	(rioHostAdrs \
+	+ \
+	SM_ANCHOR_OFFSET)))
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_ANCHOR_OFFSET
+0x4100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_CPUS_MAX
+DEFAULT_CPUS_MAX
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_INT_ARG1
+46
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_INT_ARG2
+46
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_INT_ARG3
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_INT_TYPE
+SM_INT_BUS
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_MASTER
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_MAX_WAIT
+3000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_MEM_ADRS
+0x00010000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_MEM_SIZE
+0x00070000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_OBJ_MAX_MEM_PART
+4
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_OBJ_MAX_MSG_Q
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_OBJ_MAX_NAME
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_OBJ_MAX_SEM
+60
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_OBJ_MAX_TASK
+40
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_OBJ_MAX_TRIES
+5000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_OBJ_MEM_ADRS
+(SM_MEM_ADRS+SM_MEM_SIZE)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_OBJ_MEM_SIZE
+0x00040000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_OFF_BOARD
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_TAS_TYPE
+SM_TAS_HARD
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_TIPC_ADRS
+SM_TIPC_ADRS_DEFAULT
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_TIPC_NUM_BUF
+60
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_TIPC_PKT_Q_LEN
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_TIPC_SIZE
+SM_TIPC_SIZE_DEFAULT
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SM_TIPC_SM_PKT_SIZE
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNS_DISTRIBUTED_SERVER_INSTANCE
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNS_DISTRIBUTED_SERVER_TYPE
+70
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNS_LISTEN_BACKLOG
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNS_PATHNAME
+"/romfs/snsServer.vxe"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNS_PRIORITY
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNS_STACK_SIZE
+20000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNTPS_DSTADDR
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNTPS_INTERVAL
+64
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNTPS_MODE
+SNTP_ACTIVE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNTPS_TIME_HOOK
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNTP_CLIENT_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNTP_PORT
+123
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SNTP_SERVER_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SOCKBUF_WASTE_FACTOR_CFG
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SOMAXCONN_CFG
+(SOMAXCONN) ? (SOMAXCONN) : 128
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SO_LINGER_INFINITE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_STACK_SAVE
+0x1000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_STAT_TBL_HASH_SIZE_LOG2
+6
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_STORE_ABS_SYMBOLS
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SUBNETS_ARE_LOCAL_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SW_MMU_ENABLE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SYM_TBL_HASH_SIZE_LOG2
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SYSCALL_HOOK_TBL_SIZE
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SYS_CLK_RATE
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SYS_CLK_RATE_MAX
+8000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_SYS_CLK_RATE_MIN
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TASK_KERNEL_EXEC_STACK_OVERFLOW_SIZE
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TASK_KERNEL_EXEC_STACK_UNDERFLOW_SIZE
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TASK_USER_EXC_STACK_OVERFLOW_SIZE
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TASK_USER_EXC_STACK_SIZE
+8192
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TASK_USER_EXEC_STACK_OVERFLOW_SIZE
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TASK_USER_EXEC_STACK_UNDERFLOW_SIZE
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCPV6_MTU_MIN_CFG
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_ALWAYS_KEEPALIVE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_BLACKHOLE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_DELACKTIME_CFG
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_DELACK_ENABLED_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_DO_NEWRENO_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_DO_RFC1323_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_DO_RFC1644_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_DROP_SYNFIN_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_INFLIGHT_DEBUG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_INFLIGHT_ENABLE
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_INFLIGHT_MAX
+(65535 << 14)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_INFLIGHT_MIN
+6144
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_KEEPCNT_CFG
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_KEEPIDLE_CFG
+7200000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_KEEPINIT_CFG
+75000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_KEEPINTVL_CFG
+75000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_LOCAL_SLOWSTART_FLIGHTSIZE_CFG
+65535
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_LOG_IN_VAIN_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_MSL_CFG
+30000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_MSSDFLT_CFG
+512
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_PATH_MTU_DISCOVERY_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_REASS_ENDPT_MAX_CFG
+(-1)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_REASS_GLOBAL_MAX_CFG
+512
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_RECVSPACE_CFG
+(1024*16)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_SENDSPACE_CFG
+(1024*16)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_SEQ_ISNSEED_INTERVAL
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_SLOWSTART_FLIGHTSIZE_CFG
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TCP_V6MSSDFLT_CFG
+1024
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TELNETD_MAX_CLIENTS
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TELNETD_PARSER_HOOK
+shellParserControl
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TELNETD_PORT
+23
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TELNETD_TASKFLAG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TELNET_CLIENT_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TELNET_SERVER_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TFTP_SERVER_DIRECTORYNAMES
+"/tftpboot"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TFTP_SERVER_IN_VS0
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TFTP_SERVER_MAXCONNECTIONS
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TFTP_SERVER_NOCONTROL
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TFTP_SERVER_STACKSIZE
+12000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_00064
+120
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_00128
+200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_00256
+40
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_00512
+40
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_01024
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_02048
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_04096
+2
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_08192
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_16384
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_32768
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_DATA_65536
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TIPC_NUM_SOCKETS
+200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TUNNEL_PMTU_REFRESH_CFG
+600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TYLIB_WRT_THRESHLD
+20
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TYLIB_XOFF_PCNT
+85
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_TYLIB_XON_PCNT
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_UDPCKSUM_CFG
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_UDP_BLACKHOLE_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_UDP_LOG_IN_VAIN_CFG
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_UDP_MAXDGRAM_CFG
+9216
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_UDP_RECVSPACE_CFG
+42080
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_USER_D_CACHE_ENABLE
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_USER_D_CACHE_MODE
+(CACHE_LIBRARY_MODE)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_USER_D_MMU_ENABLE
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_USER_I_CACHE_ENABLE
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_USER_I_CACHE_MODE
+(CACHE_LIBRARY_MODE)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_USER_I_MMU_ENABLE
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_USER_RESERVED_MEM
+0x10000000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_VEC_BASE_ADRS
+((char *) 0x0)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_VM_PAGE_SIZE
+4096
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_VS_APPLTIMEO_CFG
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_VS_DELTIMEO_CFG
+7000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_VS_SOCKTIMEO_CFG
+1000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_VX_NATIVE_SCHED_CONSTANT_RDY_Q
+VX_TRAD_SCHED_CONSTANT_RDY_Q
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_VX_TRAD_SCHED_CONSTANT_RDY_Q
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_BP_MAX
+50
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_COMM_PORT
+0x4321
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_COMM_VTMD
+8
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_END_DEVICE_ADDRESS
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_END_DEVICE_NAME
+NULL
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_END_DEVICE_UNIT
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_GOPHER_TAPE_LEN
+1400
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_GOPHER_TAPE_NB
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_MAX_RESTARTS
+5
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_MTU
+1500
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_NETROM_INDEX
+0
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_NETROM_NUM_ACCESS
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_NETROM_POLL_DELAY
+2
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_NETROM_ROMSIZE
+ROM_SIZE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_NETROM_TYPE
+400
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_NETROM_WIDTH
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_POOL_SIZE
+((sysMemTop() - FREE_RAM_ADRS)/16)
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_PROXY_PORT
+0x4444
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_PROXY_TASK_OPTIONS
+VX_SUPERVISOR_MODE | VX_UNBREAKABLE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_PROXY_TASK_PRIORITY
+55
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_PROXY_TASK_STACK_SIZE
+10000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_REGS_SIZE
+512
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_RESTART_TIME
+10
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_RTP_PRIORITY
+200
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_SPAWN_OPTS
+VX_FP_TASK
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_SPAWN_PRI
+100
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_SPAWN_STACK_SIZE
+0x5000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_STACK_SIZE
+0x2000
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_TASK_OPTIONS
+VX_UNBREAKABLE | VX_FP_TASK
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_TASK_PRIORITY
+3
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_TIPC_PORT_INSTANCE
+71
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_TIPC_PORT_TYPE
+70
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_TTY_BAUD
+9600
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_TTY_CHANNEL
+1
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_TTY_DEV_NAME
+"/tyCo/1"
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WDB_TTY_ECHO
+FALSE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WIN2K_PPPOE_MRU_WORKAROUND
+TRUE
+<END>
+
+<BEGIN> WCC_cds8548_PARAM_WIND_JOBS_MAX
+64
+<END>
+
+<BEGIN> WCC_cds8548_SOFT_EXCLUDE_COMPONENTS
+
+<END>
+
+<BEGIN> userComments
+
+<END>
+
+

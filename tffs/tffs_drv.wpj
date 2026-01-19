@@ -1,0 +1,636 @@
+Document file - DO NOT EDIT
+
+<BEGIN> BUILD_RULE_archive
+
+<END>
+
+<BEGIN> BUILD_RULE_objects
+
+<END>
+
+<BEGIN> BUILD_RULE_tffs_drv.out
+
+<END>
+
+<BEGIN> BUILD_RULE_tffs_drv.pl
+
+<END>
+
+<BEGIN> BUILD__CURRENT
+ppc603gnu_rel
+<END>
+
+<BEGIN> BUILD__LIST
+ppc603gnu_rel ppc603gnu_dbg
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_BUILDRULE
+archive
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_ARCHIVE
+tffs_drv_ppc603.o
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CC_ARCH_SPEC
+-mcpu=603 -mstrict-align
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CFLAGS
+-g \
+	-mcpu=603 \
+	-mstrict-align \
+	-ansi \
+	-fno-builtin \
+	-I. \
+	-I$(WIND_BASE)/target/h/ \
+	-DCPU=PPC603 \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CFLAGS_AS
+-g \
+	-mcpu=603 \
+	-mstrict-align \
+	-ansi \
+	-fno-builtin \
+	-P \
+	-xassembler-with-cpp \
+	-I. \
+	-I$(WIND_BASE)/target/h/ \
+	-DCPU=PPC603 \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CPP
+ccppc -E -P
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_HEX_FLAGS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LDDEPS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LD_PARTIAL
+ccppc -r -nostdlib -Wl,-X
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_DEPEND
+-M -w
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_GENERATE_DEPENDENCY_FILE
+-MD
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_LANG_C
+-xc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_UNDEFINE_MACRO
+-U
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_POST_BUILD_RULE
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_PRJ_LIBS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_TOOL_FAMILY
+gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_RO_DEPEND_PATH
+{$(WIND_BASE)/target/h/} \
+	{$(WIND_BASE)/target/src/} \
+	{$(WIND_BASE)/target/config/}
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_TC
+::tc_PPC603gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_BUILDRULE
+archive
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_ARCHIVE
+tffs_drv_ppc603.o
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CC_ARCH_SPEC
+-mcpu=603 -mstrict-align
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CFLAGS
+-O2 \
+	-mcpu=603 \
+	-mstrict-align \
+	-ansi \
+	-fno-builtin \
+	-I. \
+	-I$(WIND_BASE)/target/h/ \
+	-DCPU=PPC603 \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CFLAGS_AS
+-g \
+	-mcpu=603 \
+	-mstrict-align \
+	-ansi \
+	-fno-builtin \
+	-P \
+	-xassembler-with-cpp \
+	-I. \
+	-I$(WIND_BASE)/target/h/ \
+	-DCPU=PPC603 \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CPP
+ccppc -E -P
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_HEX_FLAGS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_LDDEPS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_LD_PARTIAL
+ccppc -r -nostdlib -Wl,-X
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_DEPEND
+-M -w
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_GENERATE_DEPENDENCY_FILE
+-MD
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_LANG_C
+-xc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_UNDEFINE_MACRO
+-U
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_POST_BUILD_RULE
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_PRJ_LIBS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_TOOL_FAMILY
+gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_RO_DEPEND_PATH
+{$(WIND_BASE)/target/h/} \
+	{$(WIND_BASE)/target/src/} \
+	{$(WIND_BASE)/target/config/}
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_TC
+::tc_PPC603gnu
+<END>
+
+<BEGIN> CORE_INFO_TYPE
+::prj_vxApp
+<END>
+
+<BEGIN> CORE_INFO_VERSION
+2.2
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/backgrnd.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/backgrnd.c_dependencies
+$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/flbuffer.h \
+	$(PRJ_DIR)/backgrnd.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/backgrnd.c_objects
+backgrnd.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/backgrnd.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/dosformt.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/dosformt.c_dependencies
+$(PRJ_DIR)/fltl.h \
+	$(PRJ_DIR)/flflash.h \
+	$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/flbuffer.h \
+	$(PRJ_DIR)/dosformt.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/dosformt.c_objects
+dosformt.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/dosformt.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/fatlite.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/fatlite.c_dependencies
+$(PRJ_DIR)/fltl.h \
+	$(PRJ_DIR)/flflash.h \
+	$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/flbuffer.h \
+	$(PRJ_DIR)/dosformt.h \
+	$(PRJ_DIR)/backgrnd.h \
+	$(PRJ_DIR)/stdcomp.h \
+	$(PRJ_DIR)/fatlite.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/fatlite.c_objects
+fatlite.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/fatlite.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flbase.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flbase.c_dependencies
+$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flbase.c_objects
+flbase.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flbase.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flflash.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flflash.c_dependencies
+$(PRJ_DIR)/flflash.h \
+	$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/flbuffer.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flflash.c_objects
+flflash.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flflash.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flparse.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flparse.c_dependencies
+$(PRJ_DIR)/fatlite.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/dosformt.h \
+	$(PRJ_DIR)/fltl.h \
+	$(PRJ_DIR)/flflash.h \
+	$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbuffer.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flparse.c_objects
+flparse.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flparse.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flsocket.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flsocket.c_dependencies
+$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/flbuffer.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flsocket.c_objects
+flsocket.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/flsocket.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/fltl.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/fltl.c_dependencies
+$(PRJ_DIR)/flflash.h \
+	$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/flbuffer.h \
+	$(PRJ_DIR)/fltl.h \
+	$(PRJ_DIR)/dosformt.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/fltl.c_objects
+fltl.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/fltl.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/ftllite.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/ftllite.c_dependencies
+$(PRJ_DIR)/backgrnd.h \
+	$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/flbuffer.h \
+	$(PRJ_DIR)/flflash.h \
+	$(PRJ_DIR)/fltl.h \
+	$(PRJ_DIR)/dosformt.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stdarg.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/va-ppc.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/ftllite.c_objects
+ftllite.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/ftllite.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/reedsol.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/reedsol.c_dependencies
+$(PRJ_DIR)/reedsol.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/reedsol.c_objects
+reedsol.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/reedsol.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/ssfdc.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/ssfdc.c_dependencies
+$(PRJ_DIR)/fltl.h \
+	$(PRJ_DIR)/flflash.h \
+	$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/flbuffer.h \
+	$(PRJ_DIR)/dosformt.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/ssfdc.c_objects
+ssfdc.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/ssfdc.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/tffsDrv.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/tffsDrv.c_dependencies
+$(PRJ_DIR)/tffsDrv.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/fatlite.h \
+	$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/dosformt.h \
+	$(PRJ_DIR)/fltl.h \
+	$(PRJ_DIR)/flflash.h \
+	$(PRJ_DIR)/flsocket.h \
+	$(PRJ_DIR)/flbuffer.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/tffsDrv.c_objects
+tffsDrv.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/tffsDrv.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/tffsLib.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/tffsLib.c_dependencies
+$(PRJ_DIR)/flbase.h \
+	$(PRJ_DIR)/flsystem.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(PRJ_DIR)/flcustom.h \
+	$(PRJ_DIR)/flsysfun.h \
+	$(PRJ_DIR)/tffsDrv.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/tffsLib.c_objects
+tffsLib.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/tffsLib.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> PROJECT_FILES
+$(PRJ_DIR)/backgrnd.c \
+	$(PRJ_DIR)/dosformt.c \
+	$(PRJ_DIR)/fatlite.c \
+	$(PRJ_DIR)/flbase.c \
+	$(PRJ_DIR)/flflash.c \
+	$(PRJ_DIR)/flparse.c \
+	$(PRJ_DIR)/flsocket.c \
+	$(PRJ_DIR)/fltl.c \
+	$(PRJ_DIR)/ftllite.c \
+	$(PRJ_DIR)/reedsol.c \
+	$(PRJ_DIR)/ssfdc.c \
+	$(PRJ_DIR)/tffsDrv.c \
+	$(PRJ_DIR)/tffsLib.c
+<END>
+
+<BEGIN> userComments
+<Enter description here>
+<END>
+

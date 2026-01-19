@@ -1,0 +1,639 @@
+Document file - DO NOT EDIT
+
+<BEGIN> BUILD_RULE_archive
+
+<END>
+
+<BEGIN> BUILD_RULE_objects
+
+<END>
+
+<BEGIN> BUILD_RULE_zlib.out
+
+<END>
+
+<BEGIN> BUILD_RULE_zlib.pl
+
+<END>
+
+<BEGIN> BUILD__CURRENT
+ppc603gnu_dbg
+<END>
+
+<BEGIN> BUILD__LIST
+ppc603gnu_dbg ppc603gnu_rel
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_BUILDRULE
+archive
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_ARCHIVE
+zlib_ppc603.a
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CC_ARCH_SPEC
+-mcpu=603 -mstrict-align
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CFLAGS
+-g \
+	-mcpu=603 \
+	-mstrict-align \
+	-ansi \
+	-fno-builtin \
+	-I. \
+	-I$(WIND_BASE)/target/h/ \
+	-DCPU=PPC603 \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DNSP_OS=NSP_OS_VXWORKS
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CFLAGS_AS
+-g \
+	-mcpu=603 \
+	-mstrict-align \
+	-ansi \
+	-fno-builtin \
+	-P \
+	-xassembler-with-cpp \
+	-I. \
+	-I$(WIND_BASE)/target/h/ \
+	-DCPU=PPC603 \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_CPP
+ccppc -E -P
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_HEX_FLAGS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LDDEPS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LD_PARTIAL
+ccppc -r -nostdlib -Wl,-X
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_DEPEND
+-M -w
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_GENERATE_DEPENDENCY_FILE
+-MD
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_LANG_C
+-xc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_OPTION_UNDEFINE_MACRO
+-U
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_POST_BUILD_RULE
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_PRJ_LIBS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_MACRO_TOOL_FAMILY
+gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_RO_DEPEND_PATH
+{$(WIND_BASE)/target/h/} \
+	{$(WIND_BASE)/target/src/} \
+	{$(WIND_BASE)/target/config/}
+<END>
+
+<BEGIN> BUILD_ppc603gnu_dbg_TC
+::tc_PPC603gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_BUILDRULE
+archive
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_ARCHIVE
+zlib_ppc603.a
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CC_ARCH_SPEC
+-mcpu=603 -mstrict-align
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CFLAGS
+-O2 \
+	-mcpu=603 \
+	-mstrict-align \
+	-ansi \
+	-fno-builtin \
+	-I. \
+	-I$(WIND_BASE)/target/h/ \
+	-DCPU=PPC603 \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu \
+	-DNSP_OS=NSP_OS_VXWORKS
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CFLAGS_AS
+-g \
+	-mcpu=603 \
+	-mstrict-align \
+	-ansi \
+	-fno-builtin \
+	-P \
+	-xassembler-with-cpp \
+	-I. \
+	-I$(WIND_BASE)/target/h/ \
+	-DCPU=PPC603 \
+	-DTOOL_FAMILY=gnu \
+	-DTOOL=gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_CPP
+ccppc -E -P
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_HEX_FLAGS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_LD_PARTIAL
+ccppc -r -nostdlib -Wl,-X
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_DEPEND
+-M -w
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_GENERATE_DEPENDENCY_FILE
+-MD
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_LANG_C
+-xc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_OPTION_UNDEFINE_MACRO
+-U
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_POST_BUILD_RULE
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_PRJ_LIBS
+
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_MACRO_TOOL_FAMILY
+gnu
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_RO_DEPEND_PATH
+{$(WIND_BASE)/target/h/} \
+	{$(WIND_BASE)/target/src/} \
+	{$(WIND_BASE)/target/config/}
+<END>
+
+<BEGIN> BUILD_ppc603gnu_rel_TC
+::tc_PPC603gnu
+<END>
+
+<BEGIN> CORE_INFO_TYPE
+::prj_vxApp
+<END>
+
+<BEGIN> CORE_INFO_VERSION
+2.2
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/adler32.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/adler32.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/zconf.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/adler32.c_objects
+adler32.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/adler32.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/compress.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/compress.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/zconf.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/compress.c_objects
+compress.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/compress.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/crc32.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/crc32.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/zconf.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/crc32.c_objects
+crc32.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/crc32.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/deflate.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/deflate.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/deflate.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zutil.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/deflate.c_objects
+deflate.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/deflate.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/gzio.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/gzio.c_dependencies
+$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stdarg.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/va-ppc.h \
+	$(PRJ_DIR)/zutil.h \
+	$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/zconf.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/gzio.c_objects
+gzio.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/gzio.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infblock.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infblock.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/infutil.h \
+	$(PRJ_DIR)/infcodes.h \
+	$(PRJ_DIR)/inftrees.h \
+	$(PRJ_DIR)/infblock.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zutil.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infblock.c_objects
+infblock.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infblock.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infcodes.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infcodes.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/inffast.h \
+	$(PRJ_DIR)/infutil.h \
+	$(PRJ_DIR)/infcodes.h \
+	$(PRJ_DIR)/infblock.h \
+	$(PRJ_DIR)/inftrees.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zutil.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infcodes.c_objects
+infcodes.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infcodes.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inffast.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inffast.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/inffast.h \
+	$(PRJ_DIR)/infutil.h \
+	$(PRJ_DIR)/infcodes.h \
+	$(PRJ_DIR)/infblock.h \
+	$(PRJ_DIR)/inftrees.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zutil.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inffast.c_objects
+inffast.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inffast.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inflate.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inflate.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/infblock.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zutil.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inflate.c_objects
+inflate.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inflate.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inftrees.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inftrees.c_dependencies
+$(PRJ_DIR)/inffixed.h \
+	$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/inftrees.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zutil.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inftrees.c_objects
+inftrees.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/inftrees.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infutil.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infutil.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/infutil.h \
+	$(PRJ_DIR)/infcodes.h \
+	$(PRJ_DIR)/inftrees.h \
+	$(PRJ_DIR)/infblock.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zutil.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infutil.c_objects
+infutil.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/infutil.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/trees.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/trees.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/deflate.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zutil.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/trees.c_objects
+trees.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/trees.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/uncompr.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/uncompr.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/zconf.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/uncompr.c_objects
+uncompr.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/uncompr.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/unzip.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/unzip.c_dependencies
+$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stdarg.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/va-ppc.h \
+	$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/unzip.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/unzip.c_objects
+unzip.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/unzip.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/zip.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/zip.c_dependencies
+$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stddef.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/stdarg.h \
+	$(WIND_BASE)/host/$(WIND_HOST_TYPE)/lib/gcc-lib/powerpc-wrs-vxworks/gcc-2.96/include/va-ppc.h \
+	$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zip.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/zip.c_objects
+zip.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/zip.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/zutil.c_dependDone
+TRUE
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/zutil.c_dependencies
+$(PRJ_DIR)/zlib.h \
+	$(PRJ_DIR)/zconf.h \
+	$(PRJ_DIR)/zutil.h
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/zutil.c_objects
+zutil.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/zutil.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> PROJECT_FILES
+$(PRJ_DIR)/compress.c \
+	$(PRJ_DIR)/crc32.c \
+	$(PRJ_DIR)/deflate.c \
+	$(PRJ_DIR)/gzio.c \
+	$(PRJ_DIR)/infblock.c \
+	$(PRJ_DIR)/infcodes.c \
+	$(PRJ_DIR)/inffast.c \
+	$(PRJ_DIR)/inflate.c \
+	$(PRJ_DIR)/inftrees.c \
+	$(PRJ_DIR)/infutil.c \
+	$(PRJ_DIR)/trees.c \
+	$(PRJ_DIR)/uncompr.c \
+	$(PRJ_DIR)/unzip.c \
+	$(PRJ_DIR)/zip.c \
+	$(PRJ_DIR)/adler32.c \
+	$(PRJ_DIR)/zutil.c
+<END>
+
+<BEGIN> userComments
+<Enter description here>
+<END>
+
